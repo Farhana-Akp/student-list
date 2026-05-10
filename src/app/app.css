@@ -1,0 +1,44 @@
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: darkred;
+}
+table{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+th{
+    color: rgb(15, 15, 176);
+}
+.id
+{
+    font-weight: bold;
+}
+.add
+{
+   margin-top: 40px;
+  margin-left: 45%;
+  height:50px ;
+   
+cursor: pointer;
+width: 100px;
+font-weight: bold;
+}
+.add:hover
+{
+        background-color: brown;
+color: aliceblue;
+}
+.delete
+{
+cursor: pointer;
+width: 100px;
+font-weight: bold;
+}
+.delete:hover
+{
+        background-color: brown;
+color: aliceblue;
+}

@@ -1,0 +1,68 @@
+
+
+
+
+  <h1 >STUDENT LIST</h1>
+<h2>{{studentList.length}}</h2>
+
+  <table border="4">
+    <thead>
+    <tr>
+      <th rowspan="2">ID</th>
+      <th rowspan="2">NAME</th>
+     
+            <th rowspan="2">USERNAME</th>
+            <th rowspan="2">EMAIL</th>
+            <th rowspan="2">STREET</th>
+            <th rowspan="2">SUITE</th>
+            <th rowspan="2">CITY</th>
+            <th rowspan="2">zipcode</th>
+            <th colspan="2">GEO</th>
+            <th rowspan="2">PHONE</th>
+
+
+    </tr>
+    <tr>
+      <th>LAT</th>
+      <th>LNG</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of studentList; let i = index">
+      <td class="id">{{item.id}}</td>
+     
+            <td> {{item.name}}</td>
+
+    <td> {{item.username}}</td>
+            <td> {{item.email}}</td>
+
+            <td> {{item.address?.street}}</td>
+
+                 <td>{{item.address?.suite}}</td>
+                 <td> {{item.address?.city}}</td>
+                 <td> {{item.address?.zipcode}}</td>
+    <td> {{item.address?.geo?.lat}}</td>
+        <td> {{item.address?.geo?.lng}}</td>
+
+    <td>  {{item.phone}}</td>
+    
+
+
+      <td><button (click)="delete(i)" class="delete">DELETE</button></td>
+            <td><button (click)="details(item.id,item.name)" class="delete">DETAILS</button></td>
+
+    </tr>
+  
+    </tbody>
+  </table>
+
+  
+  <router-outlet></router-outlet>
+
+
+  <!-- <button (click)="add()" class="add">ADD STUDENT</button> -->
+
+
+
+
+  
